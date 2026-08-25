@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Removes dead code: the no-op `catch (error) { throw error }` rethrow in the prompt compiler, an identical-branch ternary in the constraint compiler, an unused `omit` helper in the CLI, and the unreachable `references` fallback in the Seedream media-type helper.
+- Hardens the M9 Seedream smoke runner's credential redaction so a bare Volcengine ARK API key (UUID form, outside an `ark-` prefix or `Bearer` header) is also masked in diagnostics and reports.
+
 ## 0.1.0-rc.5
 
 - Publishes the VOCE Playground Host as a separate fifth package, `@voce-engine/playground`: an English, mobile-friendly local web UI for request-scoped image upload, ScenarioPack-derived role declaration, readable plan inspection, exact guarded-prompt validation export, and one explicitly confirmed Provider call. The npm package includes all 30 Cosplay composition examples and remains separate from public deployment.
